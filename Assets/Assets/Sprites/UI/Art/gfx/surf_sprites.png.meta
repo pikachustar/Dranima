@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: b34597279b577864d89a4164a3204182
+guid: 14ced2238d82c7149b8f5a0481222249
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6177971027756191237
-    second: sBirb_front
+      213: -4465137455631916842
+    second: surf_sprites_0
   - first:
-      213: 8873735633023940439
-    second: sBirb_back
+      213: 548946438817077065
+    second: surf_sprites_1
   - first:
-      213: 4094142302921407923
-    second: bBirb_front
+      213: 4472088847651303106
+    second: surf_sprites_2
   - first:
-      213: -4117069972878316526
-    second: bBirb_back
+      213: 6356773947664160301
+    second: surf_sprites_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -35,7 +35,6 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
-  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -45,11 +44,11 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: 1
-    mipBias: 0
+    aniso: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -58,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,12 +66,9 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -80,7 +76,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -92,7 +88,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,85 +99,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sBirb_front
+      name: surf_sprites_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 13
-        width: 41
-        height: 51
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50e001edaef8cb550800000000000000
-      internalID: 6177971027756191237
+      spriteID: 6d0a4c33425a802c0800000000000000
+      internalID: -4465137455631916842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sBirb_back
+      name: surf_sprites_1
       rect:
         serializedVersion: 2
-        x: 61
-        y: 13
-        width: 46
-        height: 49
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7573e1d0b87d52b70800000000000000
-      internalID: 8873735633023940439
+      spriteID: 947586ea0ef3e9700800000000000000
+      internalID: 548946438817077065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bBirb_front
+      name: surf_sprites_2
       rect:
         serializedVersion: 2
-        x: 122
-        y: 8
-        width: 69
-        height: 74
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bdb7899bb051d830800000000000000
-      internalID: 4094142302921407923
+      spriteID: 2ceed30ec1d001e30800000000000000
+      internalID: 4472088847651303106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bBirb_back
+      name: surf_sprites_3
       rect:
         serializedVersion: 2
-        x: 197
-        y: 8
-        width: 68
-        height: 72
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21c292f3caa3dd6c0800000000000000
-      internalID: -4117069972878316526
+      spriteID: d26dafbc93cc73850800000000000000
+      internalID: 6356773947664160301
       vertices: []
       indices: 
       edges: []
@@ -189,7 +185,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1a053aa3e2f9ccb4baca7c6f4b189986
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
