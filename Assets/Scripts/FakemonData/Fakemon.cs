@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Fakemon
 {
-    FakemonBase _base;
-    int level;
+    public FakemonBase Base {get; set;}
+    public int Level {get; set;}
 
     public int HP { get; set; }
 
@@ -13,14 +13,14 @@ public class Fakemon
 
     public Fakemon(FakemonBase fBase, int fLevel) {
 
-        _base = fBase;
-        fLevel = level;
-        HP = _base.maxHP;
+        Base = fBase;
+        Level = fLevel;
+        HP = MaxHP;
 
         Moves = new List<Move>();
-        foreach (var move in _base.LearnableMoves)
+        foreach (var move in Base.LearnableMoves)
         {
-            if (move.level <= level)
+            if (move.level <= Level)
                 Moves.Add(new Move(move.moveBase));
 
             if (Moves.Count >= 4)
@@ -30,21 +30,21 @@ public class Fakemon
 
     //Calcs the base stats...
     public int Attack {
-        get { return Mathf.FloorToInt((_base.Attack * level / 100f) + 5); }
+        get { return Mathf.FloorToInt((Base.Attack * Level / 100f) + 5); }
     }
         public int Defense {
-        get { return Mathf.FloorToInt((_base.Defense * level / 100f) + 5); }
+        get { return Mathf.FloorToInt((Base.Defense * Level / 100f) + 5); }
     }
         public int SpAttack {
-        get { return Mathf.FloorToInt((_base.SpAttack * level / 100f) + 5); }
+        get { return Mathf.FloorToInt((Base.SpAttack * Level / 100f) + 5); }
     }
         public int SpDefence {
-        get { return Mathf.FloorToInt((_base.SpDefence * level / 100f) + 5); }
+        get { return Mathf.FloorToInt((Base.SpDefence * Level / 100f) + 5); }
     }
         public int Speed {
-        get { return Mathf.FloorToInt((_base.Speed * level / 100f) + 5); }
+        get { return Mathf.FloorToInt((Base.Speed * Level / 100f) + 5); }
     }
         public int MaxHP {
-        get { return Mathf.FloorToInt((_base.MaxHP * level / 100f) + 10); }
+        get { return Mathf.FloorToInt((Base.MaxHP * Level / 100f) + 10); }
     }
 }

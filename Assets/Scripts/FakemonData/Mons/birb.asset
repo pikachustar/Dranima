@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3a15d4b3570c044be564a4069b5844, type: 3}
   m_Name: birb
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Birb
   description: 
-  frontSprite: {fileID: 0}
-  backSprite: {fileID: 0}
-  type1: 0
-  type2: 0
-  maxHP: 0
-  attack: 0
-  defense: 0
-  spAttack: 0
-  spDefence: 0
-  speed: 0
+  frontSprite: {fileID: 6177971027756191237, guid: b34597279b577864d89a4164a3204182, type: 3}
+  backSprite: {fileID: 8873735633023940439, guid: b34597279b577864d89a4164a3204182, type: 3}
+  type1: 1
+  type2: 9
+  maxHP: 21
+  attack: 11
+  defense: 8
+  spAttack: 7
+  spDefence: 6
+  speed: 12
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 26a15ee068fa03f4fa2b7c4778c73db0, type: 2}
     level: 1
