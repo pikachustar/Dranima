@@ -13,7 +13,7 @@ public class MoveBase : ScriptableObject
     [SerializeField] int power;
     [SerializeField] int accuracy;
     [SerializeField] public int pp;
-    [SerializeField] properties property;
+    [SerializeField] public properties property;
 
     //Returns move properties
     public string Name {
