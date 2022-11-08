@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,13 +9,16 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     private Vector3 moveDirection;
     public LayerMask grassLayer;
+
+    public event Action OnEncountered;
+
     void Start()
     {
 
     }
 
     // Update is called once per frame
-    void Update()
+    public void HandleUpdate()
     {
         processedInput();
         run();
@@ -23,7 +27,6 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         move();
-        CheckForEncounters();
     }
 
     void processedInput() {
@@ -49,19 +52,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void CheckForEncounters()
+    void OnTriggerEnter(Collider other)
     {
-        if(Physics2D.OverlapCircle(transform.position, 0.2f, grassLayer) != null)
+        if (UnityEngine.Random.Range(1, 101) <= 10)
         {
-            if (Random.Range(1, 101) <= 10)
-            {
-                Debug.Log("HOLY SHIT A WILD POKEMON");
-            }
-            else
-            {
-                Debug.Log("NOT WILD POKEMON");
-            }
-
+            OnEncountered();
         }
     }
 }

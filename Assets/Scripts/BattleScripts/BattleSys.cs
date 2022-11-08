@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,12 +14,14 @@ public class BattleSys : MonoBehaviour
     [SerializeField] BattleHUD enemyHUD;
     [SerializeField] BDialgBox dialogBox;
 
+    public event Action<bool> OnBattleOver;
+
     BattleState state;
     int currentAction;
     int currentMove;
 
 
-    private void Start()
+    public void StartBattle()
     {
         StartCoroutine(SetupBattle());
     }
@@ -53,7 +56,62 @@ public class BattleSys : MonoBehaviour
         dialogBox.EnableMoveSelector(true);
     }
 
-    private void Update()
+    IEnumerator PerformPlayerMove()
+    {
+        state = BattleState.Busy;
+
+        var move = playerUnit.Fakemon.Moves[currentMove];
+        yield return dialogBox.TypeDialog($"{playerUnit.Fakemon.Base.Name} used {move.Base.Name}");
+
+        yield return new WaitForSeconds(1f);
+
+        bool isFainted = enemyUnit.Fakemon.TakeDamage(move, playerUnit.Fakemon);
+
+        yield return enemyHUD.UpdateHP();
+
+        if (isFainted)
+        {
+            yield return dialogBox.TypeDialog($"{enemyUnit.Fakemon.Base.Name} Fainted");
+
+            yield return new WaitForSeconds(2f);
+            OnBattleOver(true);
+        }
+
+        else
+        {
+            StartCoroutine(EnemyMove());
+        }
+    }
+
+    IEnumerator EnemyMove()
+    {
+        state = BattleState.EnemyMove;
+
+        var move = enemyUnit.Fakemon.GetRandomMove();
+
+        yield return dialogBox.TypeDialog($"{enemyUnit.Fakemon.Base.Name} used {move.Base.Name}");
+
+        yield return new WaitForSeconds(1f);
+
+        bool isFainted = playerUnit.Fakemon.TakeDamage(move, enemyUnit.Fakemon);
+
+        yield return playerHUD.UpdateHP();
+
+        if (isFainted)
+        {
+            yield return dialogBox.TypeDialog($"{playerUnit.Fakemon.Base.Name} Fainted");
+
+            yield return new WaitForSeconds(2f);
+            OnBattleOver(false);
+        }
+
+        else
+        {
+            PlayerAction();
+        }
+    }
+
+    public void HandleUpdate()
     {
         if (state == BattleState.PlayerAction)
         {
@@ -69,7 +127,7 @@ public class BattleSys : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
-            if (currentAction < 1)
+            if (currentAction < 3)
             ++currentAction;
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
@@ -141,6 +199,13 @@ public class BattleSys : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             PlayerBack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            dialogBox.EnableMoveSelector(false);
+            dialogBox.EnableDialogText(true);
+            StartCoroutine(PerformPlayerMove());
         }
     }
 
