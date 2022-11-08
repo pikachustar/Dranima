@@ -34,6 +34,9 @@ public class MoveBase : ScriptableObject
     public properties Prop {
         get{return property;}
     }
+    public types Type {
+        get{return type;}
+    }
 
 
     public enum properties {
