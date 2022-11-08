@@ -15,6 +15,7 @@ public class MoveBase : ScriptableObject
     [SerializeField] int pp;
     [SerializeField] properties property;
 
+    //Returns move properties
     public string Name {
         get{return _name;}
     }

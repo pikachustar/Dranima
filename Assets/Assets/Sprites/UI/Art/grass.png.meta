@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: b34597279b577864d89a4164a3204182
+guid: 148f860a4a69c6145903dcc46539f7ea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6177971027756191237
-    second: sBirb_front
-  - first:
-      213: 8873735633023940439
-    second: sBirb_back
-  - first:
-      213: 4094142302921407923
-    second: bBirb_front
-  - first:
-      213: -4117069972878316526
-    second: bBirb_back
+      213: 7932798033344189819
+    second: grass_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -44,12 +35,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -103,85 +94,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sBirb_front
+      name: grass_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 13
-        width: 41
-        height: 51
+        x: 0
+        y: 98
+        width: 32
+        height: 30
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50e001edaef8cb550800000000000000
-      internalID: 6177971027756191237
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sBirb_back
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 13
-        width: 46
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7573e1d0b87d52b70800000000000000
-      internalID: 8873735633023940439
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bBirb_front
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 8
-        width: 69
-        height: 74
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bdb7899bb051d830800000000000000
-      internalID: 4094142302921407923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bBirb_back
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 8
-        width: 68
-        height: 72
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21c292f3caa3dd6c0800000000000000
-      internalID: -4117069972878316526
+      spriteID: b75d56418c5f61e60800000000000000
+      internalID: 7932798033344189819
       vertices: []
       indices: 
       edges: []
@@ -189,7 +117,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1a053aa3e2f9ccb4baca7c6f4b189986
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
