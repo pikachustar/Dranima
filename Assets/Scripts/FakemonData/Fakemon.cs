@@ -7,11 +7,25 @@ public class Fakemon
     FakemonBase _base;
     int level;
 
+    public int HP { get; set; }
+
+    public List<Move> Moves { get; set; }
+
     public Fakemon(FakemonBase fBase, int fLevel) {
 
         _base = fBase;
         fLevel = level;
+        HP = _base.maxHP;
 
+        Moves = new List<Move>();
+        foreach (var move in _base.LearnableMoves)
+        {
+            if (move.level <= level)
+                Moves.Add(new Move(move.moveBase));
+
+            if (Moves.Count >= 4)
+                break;
+        }
     }
 
     //Calcs the base stats...

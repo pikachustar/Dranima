@@ -18,12 +18,14 @@ public class FakemonBase : ScriptableObject
     [SerializeField] types type2;
 
     //Base Stats
-    [SerializeField] int maxHP;
+    [SerializeField] public int maxHP;
     [SerializeField] int attack;
     [SerializeField] int defense;
     [SerializeField] int spAttack;
     [SerializeField] int spDefence;
     [SerializeField] int speed;
+
+    [SerializeField] List<LearnableMove> learnableMoves;
     
 
     public string Name {
@@ -58,10 +60,20 @@ public class FakemonBase : ScriptableObject
         get{ return type1;}
     }
 
-
+    public List<LearnableMove> LearnableMoves
+    {
+        get { return learnableMoves; }
+    }
 
 }
-//ADD MISSING TYPES TODO... *****
+
+[System.Serializable]
+public class LearnableMove
+{
+    [SerializeField] public MoveBase moveBase;
+    [SerializeField] public int level;
+}
+
 public enum types
 {
     None,
@@ -69,5 +81,15 @@ public enum types
     Fire,
     Water,
     Grass,
+    Ice,
+    Fighting,
+    Poison,
+    Ground,
+    Flying,
+    Psychic,
+    Bug,
+    Rock,
+    Ghost,
+    Dragon
 
 }
