@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8652ccda362854b4783fa9dc45a7cb4e, type: 3}
   m_Name: Wing Attack
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Wing Attack
   description: 
   type: 9
   power: 40
