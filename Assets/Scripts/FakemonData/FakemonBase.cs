@@ -11,8 +11,8 @@ public class FakemonBase : ScriptableObject
     [SerializeField] string description;
 
     //Sprites
-    [SerializeField] Sprite frontSprite;
-    [SerializeField] Sprite backSprite;
+    [SerializeField] public Sprite frontSprite;
+    [SerializeField] public Sprite backSprite;
     
     [SerializeField] types type1;
     [SerializeField] types type2;
