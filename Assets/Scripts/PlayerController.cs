@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed; //Base movement
     public Rigidbody rb;
     private Vector3 moveDirection;
+    public LayerMask grassLayer;
     void Start()
     {
 
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         move();
+        CheckForEncounters();
     }
 
     void processedInput() {
@@ -44,6 +46,22 @@ public class PlayerController : MonoBehaviour
         }
         else{
             moveSpeed = 50;
+        }
+    }
+
+    private void CheckForEncounters()
+    {
+        if(Physics2D.OverlapCircle(transform.position, 0.2f, grassLayer) != null)
+        {
+            if (Random.Range(1, 101) <= 10)
+            {
+                Debug.Log("HOLY SHIT A WILD POKEMON");
+            }
+            else
+            {
+                Debug.Log("NOT WILD POKEMON");
+            }
+
         }
     }
 }
