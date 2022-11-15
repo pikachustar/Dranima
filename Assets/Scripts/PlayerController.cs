@@ -66,10 +66,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsBack", false);
         }
 
-        if(moveSpeed == 0)
+        if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
         {
             animator.SetBool("IsMoving", false);
-            animator.SetBool("IsLeft", false); //TODO
+             //TODO
         }
 
         moveDirection = new Vector3(moveX, 0f, moveZ).normalized;
