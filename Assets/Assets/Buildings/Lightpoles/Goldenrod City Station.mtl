@@ -1,0 +1,24 @@
+newmtl ko_light
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 0.516129
+Tr 0.516129
+map_Ka ko_light.png
+map_Kd ko_light.png
+map_d ko_light.png
+newmtl ko_pole
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka ko_pole.png
+map_Kd ko_pole.png
+map_d ko_pole.png
+newmtl ko_pole_
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka ko_pole_.png
+map_Kd ko_pole_.png
+map_d ko_pole_.png

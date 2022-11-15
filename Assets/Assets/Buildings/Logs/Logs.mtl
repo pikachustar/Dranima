@@ -1,0 +1,16 @@
+newmtl lambert2
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert2.png
+map_Kd lambert2.png
+map_d lambert2.png
+newmtl pasted__h_kage
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 0.2903226
+Tr 0.2903226
+map_Ka pasted__h_kage.png
+map_Kd pasted__h_kage.png
+map_d pasted__h_kage.png

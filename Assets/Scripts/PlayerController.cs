@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     private Vector3 moveDirection;
     public LayerMask grassLayer;
+    public Animator animator;
 
     public event Action OnEncountered;
 
@@ -32,6 +33,44 @@ public class PlayerController : MonoBehaviour
     void processedInput() {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveZ = Input.GetAxisRaw("Vertical");
+
+        if(moveX > 0) { //moving right...
+            animator.SetBool("IsRight", true);
+            animator.SetBool("IsMoving", true);
+        } 
+        else {
+            animator.SetBool("IsRight", false);
+        }
+
+        if(moveX < 0) { //moving left...
+            animator.SetBool("IsLeft", true);
+            animator.SetBool("IsMoving", true);
+        }
+        else {
+            animator.SetBool("IsLeft", false);
+        }
+
+        if(moveZ < 0) { //moving forward...
+            animator.SetBool("IsFront", true);
+            animator.SetBool("IsMoving", true);
+        }
+        else {
+            animator.SetBool("IsFront", false);
+        }
+
+        if(moveZ > 0) { //moving back...
+            animator.SetBool("IsBack", true);
+            animator.SetBool("IsMoving", true);
+        }
+        else {
+            animator.SetBool("IsBack", false);
+        }
+
+        if(moveSpeed == 0)
+        {
+            animator.SetBool("IsMoving", false);
+            animator.SetBool("IsLeft", false); //TODO
+        }
 
         moveDirection = new Vector3(moveX, 0f, moveZ).normalized;
     }
